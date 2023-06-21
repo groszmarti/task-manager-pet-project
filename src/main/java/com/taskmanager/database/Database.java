@@ -18,6 +18,7 @@ public class Database {
         try {
             return DriverManager.getConnection(url, username, password);
         } catch (SQLException ex) {
+            System.out.println(ex);
             System.err.println("Could not create database connection.");
             throw new RuntimeException(ex);
         }
