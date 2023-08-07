@@ -136,21 +136,20 @@ public class TasksDaoJdbc implements TaskDAO{
 
     @Override
     public void editTask(int taskId, TaskDTO task) {
-        /*String query = "UPDATE task\n" +
+        String query = "UPDATE task\n" +
                 "SET title = ?, description = ?, due_date = ?, priority_level = ?, status = ?\n" +
                 "WHERE task.id = ?";
         try (Connection connection = database.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setString(1, task.title());
             statement.setString(2, task.description());
-            statement.setDate(3, task.due_date());
-            statement.setString(4, task.priority_level());
+            statement.setDate(3, Date.valueOf(task.dueDate()));
+            statement.setString(4, task.priorityLevel().toString());
             statement.setString(5, task.status().toString());
             statement.setInt(6, taskId);
             statement.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
-        }*/
-        System.out.println("Not implemented yet.");
+        }
     }
 }
