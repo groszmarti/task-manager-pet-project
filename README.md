@@ -1,7 +1,7 @@
 <div alignment="center">
   <h3 alignment="center">Simple Task Manager App</h3>
 <br />
-    <img src="https://imgur.com/a/F8DStgS" width="500" height="300">
+    <img src="src/main/resources/task_manager_screenshot.png" width="500" height="300">
 <br>
 <br>
   <p alignment="center">
